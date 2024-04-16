@@ -98,7 +98,7 @@ async def cb_handler(client, query):
 
 # ------------------------------------------------------------------------------- #
         
-    elif query.data=="mhelp_":        
+    elif query.data=="help_":        
         reply_markup = InlineKeyboardMarkup(chizuru_buttons)
         try:
             await query.edit_message_text(
