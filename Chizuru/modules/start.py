@@ -68,7 +68,7 @@ back_buttons  = [[
 
 
 
-@Chizuru.on_message(filters.command("start"))
+@Chizuru.on_message(filters.command("mstart"))
 async def start(_,message):
   await message.reply_photo("https://telegra.ph/file/fabb39ffadb15ac0697ab.jpg",
                             caption=start_txt.format(message.from_user.mention),reply_markup=button)
@@ -98,7 +98,7 @@ async def cb_handler(client, query):
 
 # ------------------------------------------------------------------------------- #
         
-    elif query.data=="help_":        
+    elif query.data=="mhelp_":        
         reply_markup = InlineKeyboardMarkup(chizuru_buttons)
         try:
             await query.edit_message_text(
